@@ -1,0 +1,215 @@
+/* LoginPage.css - self contained (no Tailwind) */
+
+/* Reset for the login card area to avoid global style interference */
+.login-wrapper * { box-sizing: border-box; }
+
+/* Full-screen centered wrapper */
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* gradient similar to your home page */
+  background: linear-gradient(135deg, #4f46e5 0%, #7e22ce 50%, #db2777 100%);
+  background-size: 300% 300%;
+  animation: gradientShift 8s ease infinite;
+  padding: 24px;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* subtle animated gradient */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Card */
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 12px 30px rgba(79,70,229,0.12), 0 6px 18px rgba(0,0,0,0.06);
+  transform: translateY(0);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Card hover lift */
+.login-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 46px rgba(79,70,229,0.14), 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* Header */
+.login-header .brand {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  /* gradient text */
+  background: linear-gradient(90deg, #4f46e5, #7e22ce, #db2777);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.login-header .subtitle {
+  margin: 6px 0 20px;
+  color: #666;
+  font-size: 13px;
+}
+
+/* Form */
+.login-form .input-group {
+  margin-bottom: 14px;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+  font-size: 13px;
+}
+
+.brand-name {
+  font-size: 28px;
+  font-weight: 700;
+  color: #4f46e5; /* adjust to your theme */
+  margin-bottom: 20px;
+  text-align: center;   /* ✅ ensures text is centered */
+  display: block;       /* ✅ forces it to behave as a block element */
+}
+
+
+.input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #e1e6ef;
+  background: #fbfcfd;
+  font-size: 15px;
+  color: #222;
+  outline: none;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.input::placeholder {
+  color: #9aa3b2;
+}
+
+/* focus */
+.input:focus {
+  border-color: rgba(79,70,229,0.9);
+  box-shadow: 0 6px 18px rgba(79,70,229,0.12);
+}
+
+/* Row with remember + forgot */
+.form-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.remember {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #444;
+}
+
+.remember input {
+  width: 14px;
+  height: 14px;
+}
+
+/* forgot link */
+.forgot {
+  font-size: 13px;
+  color: #6b21a8;
+  text-decoration: none;
+}
+
+/* Primary button */
+.btn-primary {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 0;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  background: linear-gradient(90deg,#4f46e5,#7e22ce 60%,#db2777);
+  box-shadow: 0 8px 30px rgba(79,70,229,0.14);
+  transition: transform 0.2s ease, filter 0.2s ease;
+  font-size: 15px;
+}
+
+.btn-primary:hover { transform: translateY(-2px); filter: brightness(0.98); }
+
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background: #eff2f6;
+}
+
+.divider span {
+  font-size: 13px;
+  color: #8b92a0;
+}
+
+/* Social buttons */
+.btn-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #e6e9ef;
+  background: white;
+  font-weight: 600;
+  font-size: 14px;
+  color: #222;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.18s ease, transform 0.12s ease;
+}
+
+.btn-social img { width: 20px; height: 20px; display: inline-block; }
+
+.btn-social:hover { background: #f7f9fc; transform: translateY(-2px); }
+
+/* Signup line */
+.signup {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 13px;
+  color: #545a63;
+}
+
+.signup a {
+  color: #6b21a8;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.signup a:hover { text-decoration: underline; }
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-card { padding: 22px; border-radius: 12px; width: 100%; max-width: 100%; }
+  .login-header .brand { font-size: 22px; }
+}
