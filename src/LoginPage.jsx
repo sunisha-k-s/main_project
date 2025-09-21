@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Import Link for routing
 import "./LoginPage.css";
 
 export default function LoginPage() {
@@ -12,12 +13,24 @@ export default function LoginPage() {
         <form className="login-form" onSubmit={(e) => e.preventDefault()}>
           <div className="input-group">
             <label htmlFor="email">Email</label>
-            <input id="email" className="input" type="email" placeholder="Enter your email" required />
+            <input
+              id="email"
+              className="input"
+              type="email"
+              placeholder="Enter your email"
+              required
+            />
           </div>
 
           <div className="input-group">
             <label htmlFor="password">Password</label>
-            <input id="password" className="input" type="password" placeholder="Enter your password" required />
+            <input
+              id="password"
+              className="input"
+              type="password"
+              placeholder="Enter your password"
+              required
+            />
           </div>
 
           <div className="form-row">
@@ -36,17 +49,24 @@ export default function LoginPage() {
 
         <div className="socials">
           <button className="btn-social">
-            <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" />
+            <img
+              src="https://www.svgrepo.com/show/475656/google-color.svg"
+              alt="Google"
+            />
             Continue with Google
           </button>
           <button className="btn-social">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+              alt="GitHub"
+            />
             Continue with GitHub
           </button>
         </div>
 
         <p className="signup">
-          Don’t have an account? <a href="/signup">Sign up</a>
+          Don’t have an account?{" "}
+          <Link to="/signup">Sign up</Link>
         </p>
       </div>
     </div>

@@ -1,0 +1,114 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f4f6;
+  margin: 0;
+  padding: 0;
+}
+
+.resume-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.resume-box {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 100%;
+}
+
+.resume-box h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #1f2937;
+}
+
+.resume-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.resume-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #374151;
+}
+
+.resume-form input,
+.resume-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: 0.2s;
+}
+
+.resume-form input:focus,
+.resume-form textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 4px rgba(37, 99, 235, 0.3);
+}
+
+.resume-form textarea {
+  resize: vertical;
+}
+
+.template-options {
+  grid-column: span 2;
+}
+
+.template-options .template-list {
+  display: flex;
+  gap: 1rem;
+}
+
+.template-options label {
+  cursor: pointer;
+  border: 2px solid #d1d5db;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  width: 120px;
+  transition: 0.2s;
+}
+
+.template-options input[type="radio"] {
+  margin-bottom: 0.5rem;
+}
+
+.template-options label:hover {
+  border-color: #2563eb;
+}
+
+.resume-submit {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.resume-submit button {
+  background-color: #2563eb;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.resume-submit button:hover {
+  background-color: #1e40af;
+}
